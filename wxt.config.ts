@@ -8,6 +8,7 @@ export default defineConfig({
         permissions: [
             "webNavigation",
             "webRequest",
+            "storage",
 
         ],
         host_permissions: ['*://google.com/*'],

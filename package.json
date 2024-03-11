@@ -1,26 +1,29 @@
 {
-  "name": "wxt-starter",
-  "description": "manifest.json description",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "wxt",
-    "dev:firefox": "wxt -b firefox",
-    "build": "wxt build",
-    "build:firefox": "wxt build -b firefox",
-    "zip": "wxt zip",
-    "zip:firefox": "wxt zip -b firefox",
-    "compile": "vue-tsc --noEmit",
-    "postinstall": "wxt prepare"
-  },
-  "dependencies": {
-    "vue": "^3.4.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.1",
-    "typescript": "^5.3.3",
-    "vue-tsc": "^1.8.27",
-    "wxt": "^0.17.0"
-  }
+    "name": "pix-companion",
+    "description": "manifest.json description",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "wxt",
+        "dev:firefox": "wxt -b firefox",
+        "dev:edge": "wxt -b edge",
+        "build": "wxt build",
+        "build:firefox": "wxt build -b firefox",
+        "build:edge": "wxt build -b edge",
+        "zip": "wxt zip",
+        "zip:firefox": "wxt zip -b firefox",
+        "zip:edge": "wxt zip -b edge",
+        "compile": "vue-tsc --noEmit",
+        "postinstall": "wxt prepare"
+    },
+    "dependencies": {
+        "vue": "^3.4.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.1",
+        "typescript": "^5.3.3",
+        "vue-tsc": "^1.8.27",
+        "wxt": "^0.17.0"
+    }
 }

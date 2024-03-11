@@ -1,26 +1,65 @@
+
+import { storage } from 'wxt/storage';
+import { urls } from "./models/blacklist.js";
+
+
 export default defineBackground(() => {
     console.log('Hello background!', { id: browser.runtime.id });
 
-// Déclarer les URL à bloquer
-var urlsABloquer = [
-    "https://www.google.com/",
-    "https://www.google.fr/",
-    // Ajouter d'autres URLs à bloquer ici
-];
-const init = () => {
-// Déclarer les URL à bloquer
-// Écouter les événements de navigation
-browser.webNavigation.onBeforeNavigate.addListener(function(details) {
-    // Vérifier si l'URL est dans la liste à bloquer
-    if (urlsABloquer.includes(details.url)) {
-        // Bloquer la navigation en redirigeant vers une page blanche
-        //browser.webNavigation.onBeforeNavigate.removeListener();
-        browser.tabs.update(details.tabId, { url: "about:blank" });
+    // Déclarer les URL à bloquer
+    var urlsABloquer = [
+        "google.com",
+        "google.fr",
+        // Ajouter d'autres URLs à bloquer ici
+    ];
+
+
+    const pixListener = (details: any) => {
+        let found = false;
+        for (const url of urls) {
+            if (details.url.indexOf(url) >= 0) {
+                found = true;
+            }
+        }
+
+        if (found) {
+            browser.tabs.update(details.tabId, { url: "about:blank" });
+        }
     }
-});
 
-}
+    const init = () => {
+        browser.webNavigation.onBeforeNavigate.addListener(pixListener);
+    }
 
-init();
+    const unwatch = storage.watch<boolean>('local:fitering', (newCount, oldCount) => {
+        if (newCount) {
+            init()
+            if (import.meta.env.FIREFOX) {
+                browser.browserAction.setIcon(
+                    { path: "icon-on-16.png" }
+                );
+            }
+            if (import.meta.env.CHROME) {
+
+                browser.action.setIcon(
+                    { path: "icon-on-16.png" }
+                )
+            }
+        } else {
+            browser.webNavigation.onBeforeNavigate.removeListener(pixListener)
+            if (import.meta.env.FIREFOX) {
+                browser.browserAction.setIcon(
+                    { path: "icon-16.png" }
+                );
+            }
+            if (import.meta.env.CHROME) {
+                browser.action.setIcon(
+                    { path: "icon-16.png" }
+                )
+            }
+        }
+
+    });
+
 
 });
