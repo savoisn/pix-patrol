@@ -1,29 +1,19 @@
-
-import { storage } from 'wxt/storage';
+// import { storage } from 'wxt/storage';
 import { urls } from "./models/blacklist.js";
+import {isBlacklisted} from './utils/hide_some_content.js';
 
 
 export default defineBackground(() => {
-    console.log('Hello background!', { id: browser.runtime.id });
-
-    // Déclarer les URL à bloquer
-    var urlsABloquer = [
-        "google.com",
-        "google.fr",
-        // Ajouter d'autres URLs à bloquer ici
-    ];
-
 
     const pixListener = (details: any) => {
-        let found = false;
-        for (const url of urls) {
-            if (details.url.indexOf(url) >= 0) {
-                found = true;
-            }
-        }
+        console.log(details)
+        let found = isBlacklisted(details.url);
 
         if (found) {
-            browser.tabs.update(details.tabId, { url: "about:blank" });
+            //const path = PublicPath("forbidden.html")
+            console.log(details.url+" is forbiden")
+            const forbidden_url = browser.runtime.getURL("forbidden.html");
+            browser.tabs.update(details.tabId, { url: forbidden_url });
         }
     }
 

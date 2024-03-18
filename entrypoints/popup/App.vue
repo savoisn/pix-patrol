@@ -36,26 +36,29 @@
     <label class="switch-label" for="filtering">Filtering {{checked?"Active":"Inactive"}}</label>
     
 
-  <div class="hints left">filtered urls:</div>
-    <ul class="urls">
-      <li v-for="url in urls">
-        {{ url }}
-      </li>
-    </ul>
-  </div>
 
   <div>
       
-      <div class="hints">Little links to help testing:</div>
-    <a href="https://www.google.com" target="_blank">
-      <img src="@/assets/google.svg" class="logo" alt="google com" />
+  <div class="hints">Little links to help testing:</div>
+    <a href="https://genial.ly/" target="_blank">
+      <img src="@/assets/genially.png" class="logo" alt="genial ly" />
     </a>
-    <a href="https://wxt.dev" target="_blank">
-      <img src="/wxt.svg" class="logo" alt="WXT logo" />
+    <a href="https://nosdevoirs.fr" target="_blank">
+      <img src="@/assets/nosdevoirs.svg" class="logo" alt="Nos Devoirs logo" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
+    <a href="https://pix.fr/" target="_blank">
+      <img src="@/assets/pix-logo.svg" class="logo vue" alt="Pix logo" />
     </a>
+  </div>
+
+  <div class="hints left">filtered urls:</div>
+      <div class="urllist">
+        <ul class="urls">
+          <li v-for="url in urls">
+            {{ url }}
+          </li>
+        </ul>
+      </div>
   </div>
 </template>
 
@@ -73,12 +76,13 @@
       filter: drop-shadow(0 0 0.5em #42b883aa);
     }
 
-/* The switch - the box around the slider */
-/* The switch - the box around the slider */
-    /* The switch - the box around the slider */
 .toggle-fitlering {
     padding-top: 1em;
     text-align:center;
+}
+.urllist{
+    overflow: auto;
+    height: 16em;
 }
 .switch-label {
     padding-left: 1em;

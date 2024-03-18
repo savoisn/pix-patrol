@@ -1,6 +1,6 @@
 {
     "name": "pix-companion",
-    "description": "manifest.json description",
+    "description": "Un Companion pour vous accompagner dans la certification de vos compenténces numérique",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -14,6 +14,7 @@
         "zip": "wxt zip",
         "zip:firefox": "wxt zip -b firefox",
         "zip:edge": "wxt zip -b edge",
+        "zip:safari": "wxt zip -b safari",
         "compile": "vue-tsc --noEmit",
         "postinstall": "wxt prepare"
     },
