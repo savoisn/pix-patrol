@@ -1,0 +1,40 @@
+= Installer l'extension Pix Companion sur Chrome
+
+== Télécharger l'archive
+ouvrir cette page : +
+https://drive.google.com/drive/u/0/folders/1BpUbmFJ6NGttLn1NJfYt2amSedT7HXsG
+
+.telecharger le fichier comme indique ici
+image::./images/chrome/00_chrome_download.png[]
+
+créer un nouveau repertoire +
+déplacer le fichier télécharger dans ce nouveau repertoire +
+décompresser le fichier zip dans ce repertoire
+
+
+== Installer l'extension
+
+.localiser le bouton de gestion des extensions dans Chrome
+image::./images/chrome/01_manage_extension.png[]
+
+.activer le mode developper
+image::./images/chrome/02_activate_dev_mode_extension.png[]
+
+.charger une extension non packagée
+image::./images/chrome/03_load_unpacked.png[]
+
+.choisir le dossier ou vous avez decompresser le zip sur le poste
+image::./images/chrome/04_select_folder.png[]
+
+.Pix Companion est installé
+image::./images/chrome/05_pix_companion_installed.png[]
+
+.Pour ajouter Pix Companion a la barre d'action de chrome
+image::./images/chrome/06_pix_companion_pin.png[]
+
+.Pix Companion est donc disponible, il suffit de clicker dessus
+image::./images/chrome/07_pix_companion_pinned.png[]
+
+.Pix Companion est actif, activer le switch pour filtrer les resultats en fonction de la liste affichees.
+image::./images/chrome/08_pix_companion_view.png[]
+

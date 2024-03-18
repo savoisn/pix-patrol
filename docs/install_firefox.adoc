@@ -1,0 +1,48 @@
+== Installer l'extension Pix Companion sur Firefox
+
+=== Télécharger l'archive
+
+ouvrir cette page : +
+https://drive.google.com/drive/u/0/folders/1BpUbmFJ6NGttLn1NJfYt2amSedT7HXsG
+
+.telecharger le fichier comme indique ici
+image::./images/firefox/00_firefox_download.png[]
+
+
+=== Installer l'extension
+
+.localiser le bouton de gestion des extensions dans Firefox
+image::./images/firefox/01_firefox.png[]
+
+.gerer les extensions
+image::./images/firefox/02_manage_extensions.png[]
+
+.ouvrir l'interface de gestion des extensions
+image::./images/firefox/03_extension_page.png[]
+
+.installer un module en debug (obligatoire tant qu'on a pas signer l'extension)
+image::./images/firefox/04_install_module_for_debug.png[]
+
+.affichage de l'interface de gestion des extensions temporaires
+image::./images/firefox/05_temporary_extension_page.png[]
+
+.selection du fichier .zip depuis votre disque dur (la ou vous avez telecharge l'archive)
+image::./images/firefox/06_extension_file_browser.png[]
+
+.l'extension Pix Companion est disponible
+image::./images/firefox/07_pix_companion_installed.png[]
+
+.ouvrir le menu des extensions dans l'interface principale
+image::./images/firefox/08_pix_companion_in_extensions.png[]
+
+.gerer l'extension Pix Companion elle meme
+image::./images/firefox/09_manage_pix_companion.png[]
+
+.ajouter Pix Companion dans la barre d'action de Firefox
+image::./images/firefox/10_pin_pix_companion.png[]
+
+.l'icone de Pix Companion juste à coté de l'icone des extensions
+image::./images/firefox/11_pix_companion_extension_installed.png[]
+
+.Pix Companion est actif, activer le switch pour filtrer les resultats en fonction de la liste affichees.
+image::./images/firefox/12_pix_companion.png[]

@@ -19,6 +19,7 @@
         "postinstall": "wxt prepare"
     },
     "dependencies": {
+        "asciidoctor": "^2.2.7",
         "vue": "^3.4.0"
     },
     "devDependencies": {
