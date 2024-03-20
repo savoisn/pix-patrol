@@ -27,7 +27,6 @@ export default defineContentScript({
                     }
                 })
 
-
                 const app = document.createElement('div');
                 app.id = "pix-companion"
                 const p = document.createElement('p');
@@ -42,8 +41,6 @@ export default defineContentScript({
                     for(const googleClass of googleClassList){
                         blurClassContent(googleClass, document)
                     }
-
-
                 } else {
                     p.textContent = "filtrage inactif";
                 }
